@@ -1,0 +1,88 @@
+$secondary-color: #125688;
+$platzigram-red: #F44336;
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o){
+	@if $vendors{
+		@each $vendor in $vendors{
+			#{"-"+$vendor+"-"+$property}: #{$value};
+		}
+	}
+	#{$property}: #{$value};
+}
+
+body{
+	background: #FAFAFA;
+	color: $secondary-color;
+	font-family: Montserrat;
+}
+
+.header{
+	background-color: #00377B;
+	color: #FFFFFF;
+	box-shadow: none;
+}
+
+.blue-icons{
+	color: #0DC8FD;
+}
+
+.white-icons{
+	color: #FFFFFF;
+}
+
+.btn-nb:hover{
+	background-color: transparent;
+}
+
+.tigoune{
+	width: 28%;
+}
+
+.main-section{
+	padding: 2%;
+	background-color: #FFFFFF;
+	border-top: 2px solid #51CCF3;
+	width: 98%;
+	margin: 0 auto;
+}
+
+.over{
+	position: relative;
+    top: -35px;
+}
+
+.full-img{
+	width: 100%;
+}
+
+.main-title{
+	text-align: center;
+	color: #000000;
+	font-size: 1.5em;
+}
+
+.sub-title{
+	text-align: center;
+	color: #707682;
+}
+
+.center{
+	text-align: center;
+}
+
+.link{
+	color: #00C8FF;
+	cursor: pointer;
+}
+
+.record-btn{
+	background-color: #00C8FF;
+    width: 8%;
+    padding: 2%;
+    font-size: 2em;
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-top: 4%;
+}
