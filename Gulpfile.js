@@ -21,6 +21,17 @@ gulp.task('images', function(){
 		.pipe(gulp.dest('public/images'));
 });
 
+gulp.task('scripts', function(){
+	var bundle = browserify('./assets/js/code.js');
+
+	bundle
+		.transform(babel, {presets: ["es2015"], plugins: ['syntax-async-functions', 'transform-regenerator']})
+    	.bundle()
+    	.on('error', function(err){console.log(err); this.emit('end'); })
+    	.pipe(source('code.js'))
+    	.pipe(gulp.dest('public/js'));
+})
+
 function compile(watch){
 	var bundle = browserify('./src/index.js');
 	if(watch){
@@ -50,4 +61,4 @@ gulp.task('watch', function(){
 	return compile(true);
 });
 
-gulp.task('default',['styles', 'images', 'build']);
+gulp.task('default',['styles', 'images', 'build', 'scripts']);

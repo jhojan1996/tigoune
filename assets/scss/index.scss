@@ -1,7 +1,44 @@
 $secondary-color: #125688;
 $platzigram-red: #F44336;
+$black-color : #000000;
+$white-color: #FFFFFF;
+$blue-color: #00C8FF;
+$disabled-letter: #9B9B9B;
 
 @import "node_modules/materialize-css/sass/materialize.scss";
+
+@keyframes pulse{
+	10%{
+        box-shadow: 0px 0px 1px 10px #A4CEC3;
+    }
+    20%{
+       box-shadow: 0px 0px 1px 5px #A4CEC3;
+    }
+    30%{
+       box-shadow: 0px 0px 1px 10px #A4CEC3;
+    }
+    40%{
+       box-shadow: 0px 0px 1px 15px #A4CEC3;
+    }
+    50%{
+        box-shadow: 0px 0px 1px 10px #A4CEC3;
+    }
+    60%{
+        box-shadow: 0px 0px 1px 15px #A4CEC3;
+    }
+    70%{
+        box-shadow: 0px 0px 1px 10px #A4CEC3;
+    }
+    80%{
+        box-shadow: 0px 0px 1px 5px #A4CEC3;
+    }
+    90%{
+        box-shadow: 0px 0px 1px 10px #A4CEC3;
+    }
+    100%{
+        box-shadow: 0px 0px 1px 5px #A4CEC3;
+    }
+}
 
 @mixin prefix($property, $value, $vendors: webkit moz ms o){
 	@if $vendors{
@@ -18,7 +55,13 @@ body{
 	font-family: Montserrat;
 }
 
+.container{
+	max-width:100%;
+	width: 100%;
+}
+
 .header{
+	position: fixed;
 	background-color: #00377B;
 	color: #FFFFFF;
 	box-shadow: none;
@@ -42,15 +85,8 @@ body{
 
 .main-section{
 	padding: 2%;
-	background-color: #FFFFFF;
-	border-top: 2px solid #51CCF3;
 	width: 98%;
 	margin: 0 auto;
-}
-
-.over{
-	position: relative;
-    top: -35px;
 }
 
 .full-img{
@@ -85,4 +121,136 @@ body{
     border-radius: 100px;
     margin: 0 auto;
     margin-top: 4%;
+}
+
+.row .col {
+    padding: 0;
+}
+
+.container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.black-word{
+	color: $black-color;
+	padding: 2% !important;
+	background-color: $white-color;
+	border: 1px solid $disabled-letter;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+
+
+}
+
+.black-word:hover{
+	border: 1px solid $blue-color;
+	-ms-transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+
+    .custom-btn{
+    	color: $white-color;
+		background-color: $blue-color;
+	}
+}
+
+.small-title{
+	font-size: 1em;
+}
+
+.plan-name{
+	font-size: 2.2em;
+}
+
+.plan-name small{
+	font-size: 0.5em;
+}
+
+.plan-content{
+	text-align: left;
+}
+
+ul.own-list {
+  	list-style: none;
+  	padding: 0;
+  	margin: 0;
+}
+
+ul.own-list li {
+  	padding-left: 1em; 
+  	text-indent: -.7em;
+}
+
+ul.own-list li::before {
+  	content: "• ";
+  	color: #00C8FF;
+  	font-size: 1.6em;
+}
+
+.custom-btn{
+	font-weight: bold;
+	border-radius: 10px;
+	background-color: #FAFAFA;
+	color: $disabled-letter;
+	box-shadow: none;
+}
+
+.bg{
+	background: transparent url("/images/bg_gradient.jpg") no-repeat fixed center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-tigo{
+	padding: 2%;
+
+	img{
+		width: 10%;
+	}
+}
+
+.rec-btn{
+	text-align: center;
+	color: #FFFFFF;
+	.micr{
+		border-radius: 80px;
+		width: 10%;
+		font-size: 4em;
+		padding: 3%;
+		margin: 0 auto;
+		cursor: pointer;
+		background: -webkit-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
+	    background: -o-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
+	    background: -moz-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
+	    background: linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
+	}
+	.btn-text{
+		margin-top: 2%;
+		font-size: 1.5em;
+	}
+	.micr-en{
+		animation-name: pulse;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
+
+.dialog-container{
+	.dialog{
+		width: 50%;
+		height: 30%;
+		padding: 2%;
+		text-align: right;
+		color: $white-color;
+		font-weight: bold;
+		line-height: 200%;
+		float: right;
+	}
+}
+
+.clear{
+	clear: both;
 }
