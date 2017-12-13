@@ -35,10 +35,6 @@ app.post('/ai', (req, res)=>{
            console.log("Inicio recargas");
            recargas.recargas(req, res);
         break;
-        case 'pagos':
-           console.log("Inicio pagar tarjeta");
-            pagos.pagos(res, req);
-        break;
     }
 });
 

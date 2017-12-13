@@ -9,15 +9,15 @@ export default function userPageTemplate(plan){
 		},
 		{
 			dialogflow: "Recargar 5000",
-			text: "Hola! Veo que quieres recargar $5000"
+			text: "Hola! Veo que quieres recargar 5000 pesos"
 		},
 		{
 			dialogflow: "Recargar 20000",
-			text: "Hola! Veo que quieres recargar $5000"
+			text: "Hola! Veo que quieres recargar 20000 pesos"
 		},
 		{
 			dialogflow: "Recargar 30000",
-			text: "Hola! Veo que quieres recargar $5000"
+			text: "Hola! Veo que quieres recargar 30000 pesos"
 		}
 	];
 
@@ -28,9 +28,7 @@ export default function userPageTemplate(plan){
 				<img src='/images/tigo.png'>
 			</div>
 			<div class='dialog-container'>
-				<div class='dialog'>
-					Perfecto Ana, tu<br> plan de 10 MEGAS de internet<br> quedara activo con tu pago de $70.900
-				</div>
+				<div class='dialog' id='dialog'></div>
 			</div>
 			<div class='clear'></div>
 			<div class='rec-btn'>
@@ -115,7 +113,7 @@ export default function userPageTemplate(plan){
 	    respond(spokenResponse);
 	}
 
-	function respond(val, text) {
+	function respond(val, text="") {
 	    if (val == "") {
 	        val = messageSorry;
 	    }
@@ -130,14 +128,24 @@ export default function userPageTemplate(plan){
 	        };
 	        msg.onend = event=>{
 	            console.log("termine de hablar");
-	           	send(text);
+	            if(text !== ""){
+	            	send(text);
+	            }	           	
 	        };
 	        window.utterances.push(msg);
         	window.speechSynthesis.speak(msg);
+
+        	setConversation(val);
 	    }
 	}
 
-	respond(opc[plan].text, opc[plan].dialogflow);
+	function setConversation(text){
+		$("#dialog").append(`<div>${text}</div>`)
+	}
+
+	window.onload = ()=>{
+		respond(opc[plan].text, opc[plan].dialogflow);
+	}	
 
 	return layout(el);
 }

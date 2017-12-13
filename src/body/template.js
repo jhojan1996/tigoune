@@ -1,6 +1,5 @@
 var yo = require('yo-yo');
 var layout = require('../layout');
-var request = require('superagent');
 
 module.exports = function(){
 	var el =  yo`
