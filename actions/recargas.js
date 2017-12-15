@@ -1,18 +1,23 @@
 exports.recargas = (req, res)=>{
 	console.log('***** recargas *****');
-    const numeroCelular = (typeof req.body.result.contexts[0].parameters.numero_celular !== 'undefined') ? req.body.result.contexts[0].parameters.numero_celular : '';
-    const valorRecarga = (typeof req.body.result.contexts[0].parameters.valor_recarga.number !== 'undefined') ? req.body.result.contexts[0].parameters.valor_recarga.number: '';
+    //const numeroCelular = (typeof req.body.result.contexts[0].parameters.numero_celular !== 'undefined') ? req.body.result.contexts[0].parameters.numero_celular : '';
+    const valorRecarga = (typeof req.body.result.contexts[0].parameters.valor_recarga !== 'undefined') ? req.body.result.contexts[0].parameters.valor_recarga: '';
     const claveCuenta = (typeof req.body.result.contexts[0].parameters.clave_cuenta !== 'undefined') ? req.body.result.contexts[0].parameters.clave_cuenta : '';
     const confirm = (typeof req.body.result.contexts[0].parameters.confirm_recarga !== 'undefined') ? req.body.result.contexts[0].parameters.confirm_recarga : '';
     let response;
     let text;
     let setContext;
+    let numeroCelular = '';
 
-    if(valorRecarga){
+    if(typeof req.body.result.contexts[0].parameters.numero_celular.number !== 'undefined'){
+        numeroCelular = `${req.body.result.contexts[0].parameters.numero_celular.number} ${req.body.result.contexts[0].parameters.numero_celular.number2} ${req.body.result.contexts[0].parameters.numero_celular.number3}`;
+    }
+
+    if(valorRecarga !== ''){
         console.log("Valor recarga enviado =====>", valorRecarga);
-        if(numeroCelular){
+        if(numeroCelular !== ''){
             console.log("Numero celular ======>", numeroCelular);
-            if(confirm){
+            if(confirm !== ''){
                 if(confirm === 'si' || confirm === 'sí'){
                 	if(claveCuenta){
                 		text = `Tu recarga fue realizada con exito`;
@@ -120,7 +125,7 @@ exports.recargas = (req, res)=>{
         }
     }else{
         console.log("Valor recarga no enviada");
-        text = `¿Cual es el valor de la recarga?`;
+        text = `Hola. Para iniciar tu recarga necesitamos saber la siguiente información. ¿cuanto deseas recargar?`;
         setContext = [
             {
                 "name":"recarga", 

@@ -2641,93 +2641,17 @@ module.exports = [
 },{}],18:[function(require,module,exports){
 'use strict';
 
-var page = require('page');
-var empty = require('empty-element');
-var title = require('title');
-var header = require('../header');
-var template = require('./template');
-
-page('/', header, function (ctx, next) {
-	title('Platzigram');
-	var main = document.getElementById('main-container');
-
-	empty(main).appendChild(template());
-});
-
-},{"../header":21,"./template":19,"empty-element":4,"page":13,"title":15}],19:[function(require,module,exports){
-'use strict';
-
-var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'row\'>\n\t\t\t<div class=\'col s12 m10 l12\'>\n\t\t\t\t<img src=\'images/banner1.jpg\' class=\'full-img\'/>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\'row over\'>\n\t\t\t<div class=\'col s10 m10 offset-m1 l8 offset-l2 center-align\'>\n\t\t\t\t<form enctype=\'multipar/form-data\' class=\'form-upload\' id=\'formUpload\'>\n\t\t\t\t\t<div class=\'main-section\'>\n\t\t\t\t\t\t<div class=\'main-title\'>En TIGO UNE se acabaron las bajas velocidades</div>\n\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t<a href=\'/listen/1\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>5 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 5 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Chatea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Accede a tu email</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Disfruta tus peliculas favoritas</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Realiza videoconferencias</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 5.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/2\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>10 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 10 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido mas pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Contecta varios dispositivos</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 10.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn enabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/3\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>20 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 20 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Conecta tu TV, tablet o m\xF3vil</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido m\xE1s pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 20.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'row\'>\n\t\t\t<div class=\'col s12 m10 l12\'>\n\t\t\t\t<img src=\'images/banner1.jpg\' class=\'full-img\'/>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\'row over\'>\n\t\t\t<div class=\'col s10 m10 offset-m1 l8 offset-l2 center-align\'>\n\t\t\t\t<form enctype=\'multipar/form-data\' class=\'form-upload\' id=\'formUpload\'>\n\t\t\t\t\t<div class=\'main-section\'>\n\t\t\t\t\t\t<div class=\'main-title\'>En TIGO UNE se acabaron las bajas velocidades</div>\n\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t<a href=\'/listen/1\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>5 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 5 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Chatea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Accede a tu email</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Disfruta tus peliculas favoritas</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Realiza videoconferencias</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 5.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/2\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>10 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 10 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido mas pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Contecta varios dispositivos</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 10.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn enabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/3\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>20 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 20 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Conecta tu TV, tablet o m\xF3vil</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido m\xE1s pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 20.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var yo = require('yo-yo');
-var layout = require('../layout');
-
-module.exports = function () {
-	var el = yo(_templateObject);
-
-	return layout(el);
-};
-
-},{"../layout":23,"yo-yo":16}],20:[function(require,module,exports){
-"use strict";
-
-},{}],21:[function(require,module,exports){
-'use strict';
-
-var _templateObject = _taggedTemplateLiteral(['\n\t<nav class=\'header\'>\n\t\t<div class=\'nav-wrapper\'>\n\t\t\t<div class=\'container\'>\n\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t<div class=\'col s1 m6\'>\n\t\t\t\t\t\t<a href=\'#\' class=\'btn btn-large btn-flat dropdown-button btn-nb\'>\n\t\t\t\t\t\t\t<i class="fa fa-bars blue-icons" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<a href=\'/\' class=\'brand-logo\'><img src=\'images/tigo.png\' class=\'tigoune\'/></a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\'col s1 m2 push-s5 push-m4\'>\n\t\t\t\t\t\t<a href=\'#\' class=\'btn btn-large btn-flat dropdown-button btn-nb\' data-activates=\'drop-user\'>\n\t\t\t\t\t\t\t<i class=\'fa fa-user-o blue-icons\' aria-hidden=\'true\'></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id=\'drop-user\' class=\'dropdown-content\'>\n\t\t\t\t\t\t\t<li><a href=\'#\'>Salir</a></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<a href=\'/listen/0\' class=\'btn btn-large btn-flat btn-nb\'>\n\t\t\t\t\t\t\t<i class="fa fa-microphone blue-icons" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\'\n\t</nav>'], ['\n\t<nav class=\'header\'>\n\t\t<div class=\'nav-wrapper\'>\n\t\t\t<div class=\'container\'>\n\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t<div class=\'col s1 m6\'>\n\t\t\t\t\t\t<a href=\'#\' class=\'btn btn-large btn-flat dropdown-button btn-nb\'>\n\t\t\t\t\t\t\t<i class="fa fa-bars blue-icons" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<a href=\'/\' class=\'brand-logo\'><img src=\'images/tigo.png\' class=\'tigoune\'/></a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\'col s1 m2 push-s5 push-m4\'>\n\t\t\t\t\t\t<a href=\'#\' class=\'btn btn-large btn-flat dropdown-button btn-nb\' data-activates=\'drop-user\'>\n\t\t\t\t\t\t\t<i class=\'fa fa-user-o blue-icons\' aria-hidden=\'true\'></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<ul id=\'drop-user\' class=\'dropdown-content\'>\n\t\t\t\t\t\t\t<li><a href=\'#\'>Salir</a></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t<a href=\'/listen/0\' class=\'btn btn-large btn-flat btn-nb\'>\n\t\t\t\t\t\t\t<i class="fa fa-microphone blue-icons" aria-hidden="true"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\'\n\t</nav>']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var yo = require('yo-yo');
-var empty = require('empty-element');
-
-var el = yo(_templateObject);
-
-module.exports = function (ctx, next) {
-	var container = document.getElementById("header-container");
-	empty(container).appendChild(el);
-	next();
-};
-
-},{"empty-element":4,"yo-yo":16}],22:[function(require,module,exports){
-'use strict';
-
-var page = require('page');
-
-require('./body');
-require('./listen');
-require('./footer');
-
-page();
-
-},{"./body":18,"./footer":20,"./listen":24,"page":13}],23:[function(require,module,exports){
-'use strict';
-
-var _templateObject = _taggedTemplateLiteral(['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t'], ['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var yo = require('yo-yo');
-module.exports = function layout(content) {
-	return yo(_templateObject, content);
-};
-
-},{"yo-yo":16}],24:[function(require,module,exports){
-'use strict';
-
 var _page = require('page');
 
 var _page2 = _interopRequireDefault(_page);
 
-var _title = require('title');
-
-var _title2 = _interopRequireDefault(_title);
-
 var _emptyElement = require('empty-element');
 
 var _emptyElement2 = _interopRequireDefault(_emptyElement);
+
+var _title = require('title');
+
+var _title2 = _interopRequireDefault(_title);
 
 var _template = require('./template');
 
@@ -2735,25 +2659,23 @@ var _template2 = _interopRequireDefault(_template);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _page2.default)('/listen/:product', function (ctx, next) {
-	//ctx.params.product
-	(0, _title2.default)('Recargas');
+(0, _page2.default)('/', function (ctx, next) {
+	(0, _title2.default)('Tigo voz');
 	var main = document.getElementById('main-container');
-	var header = document.getElementById('header-container');
-	(0, _emptyElement2.default)(header);
-	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.params.product));
+
+	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)());
 });
 
-},{"./template":25,"empty-element":4,"page":13,"title":15}],25:[function(require,module,exports){
+},{"./template":19,"empty-element":4,"page":13,"title":15}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'logo-tigo\'>\n\t\t\t\t<img src=\'/images/tigo.png\'>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'clear\'></div>\n\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t<div class=\'btn-text\'><b>Contectado a TIGO</b></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'logo-tigo\'>\n\t\t\t\t<img src=\'/images/tigo.png\'>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'clear\'></div>\n\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t<div class=\'btn-text\'><b>Contectado a TIGO</b></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t']);
+var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>TigoVOZ</div>\n\t\t\t\t<div class=\'submain-title\'>Inteligencia artificial / Lenguaje natural</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Compra Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Informacion de producto <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>TigoVOZ</div>\n\t\t\t\t<div class=\'submain-title\'>Inteligencia artificial / Lenguaje natural</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Compra Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Informacion de producto <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t']);
 
-exports.default = userPageTemplate;
+exports.default = body;
 
 var _yoYo = require('yo-yo');
 
@@ -2767,21 +2689,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-function userPageTemplate(plan) {
-	var opc = [{
-		dialogflow: "hola tigo",
-		text: "Hola! Bienvenido a tigo voz"
-	}, {
-		dialogflow: "Recargar 5000",
-		text: "Hola! Veo que quieres recargar 5000 pesos"
-	}, {
-		dialogflow: "Recargar 20000",
-		text: "Hola! Veo que quieres recargar 20000 pesos"
-	}, {
-		dialogflow: "Recargar 30000",
-		text: "Hola! Veo que quieres recargar 30000 pesos"
-	}];
-
+function body() {
 	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
 
 	var v = "20170516";
@@ -2792,7 +2700,7 @@ function userPageTemplate(plan) {
 	var messageCouldntHear = "No pude oirte, ¿Puedes decirlo de nuevo?";
 	var messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
 	var messageSorry = "Lo siento, no tengo una respuesta a esto";
-	var recognition;
+	var recognition = void 0;
 
 	function startRecognition() {
 		recognition = new webkitSpeechRecognition();
@@ -2809,11 +2717,13 @@ function userPageTemplate(plan) {
 			for (var i = event.resultIndex; i < event.results.length; ++i) {
 				text += event.results[i][0].transcript;
 			}
+			setUserConversation(text);
 			send(text);
 			stopRecognition();
 		};
 		recognition.onend = function () {
 			$("#rec").removeClass("micr-en");
+			setMachineConversation(messageCouldntHear);
 			respond(messageCouldntHear);
 			stopRecognition();
 		};
@@ -2883,19 +2793,223 @@ function userPageTemplate(plan) {
 			window.utterances.push(msg);
 			window.speechSynthesis.speak(msg);
 
-			setConversation(val);
+			setMachineConversation(val);
 		}
 	}
 
-	function setConversation(text) {
-		$("#dialog").append('<div>' + text + '</div>');
+	function setUserConversation(text) {
+		$("#dialog").append('<div class=\'user\'>' + text + '</div>');
 	}
 
-	window.onload = function () {
-		respond(opc[plan].text, opc[plan].dialogflow);
-	};
+	function setMachineConversation(text) {
+		$("#dialog").append('<div class=\'machine\'>' + text + '</div>');
+	}
 
 	return (0, _layout2.default)(el);
 }
 
-},{"../layout":23,"yo-yo":16}]},{},[22]);
+},{"../layout":22,"yo-yo":16}],20:[function(require,module,exports){
+"use strict";
+
+},{}],21:[function(require,module,exports){
+'use strict';
+
+var page = require('page');
+
+require('./body');
+require('./listen');
+require('./footer');
+
+page();
+
+},{"./body":18,"./footer":20,"./listen":23,"page":13}],22:[function(require,module,exports){
+'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t'], ['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t']);
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var yo = require('yo-yo');
+module.exports = function layout(content) {
+	return yo(_templateObject, content);
+};
+
+},{"yo-yo":16}],23:[function(require,module,exports){
+'use strict';
+
+var _page = require('page');
+
+var _page2 = _interopRequireDefault(_page);
+
+var _title = require('title');
+
+var _title2 = _interopRequireDefault(_title);
+
+var _emptyElement = require('empty-element');
+
+var _emptyElement2 = _interopRequireDefault(_emptyElement);
+
+var _template = require('./template');
+
+var _template2 = _interopRequireDefault(_template);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _page2.default)('/listen/:action', function (ctx, next) {
+	//ctx.params.action
+	(0, _title2.default)(ctx.params.action);
+	var main = document.getElementById('main-container');
+	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.params.action));
+});
+
+},{"./template":24,"empty-element":4,"page":13,"title":15}],24:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'nav-content\'>\n\t\t\t\t<nav>\n\t\t\t\t\t<div class="nav-wrapper custom-bg">\n\t\t\t\t  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n\t\t\t\t  \t\t<ul class="right hide-on-med-and-down icon-size">\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n\t\t\t\t  \t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</nav>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'rec-btn2\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'nav-content\'>\n\t\t\t\t<nav>\n\t\t\t\t\t<div class="nav-wrapper custom-bg">\n\t\t\t\t  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n\t\t\t\t  \t\t<ul class="right hide-on-med-and-down icon-size">\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n\t\t\t\t  \t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</nav>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'rec-btn2\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t']);
+
+exports.default = userPageTemplate;
+
+var _yoYo = require('yo-yo');
+
+var _yoYo2 = _interopRequireDefault(_yoYo);
+
+var _layout = require('../layout');
+
+var _layout2 = _interopRequireDefault(_layout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function userPageTemplate(action) {
+	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
+
+	var v = "20170516";
+	var accessToken = "8cd79128d3d946f085969c75ea181633";
+	var developerToken = "492c21e9cf5d47bbb94f6dcbdce5b1b8";
+	var baseUrl = "https://api.dialogflow.com/v1/";
+	var messageRecording = "Escuchando...";
+	var messageCouldntHear = "No pude oirte, ¿Puedes decirlo de nuevo?";
+	var messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
+	var messageSorry = "Lo siento, no tengo una respuesta a esto";
+	var recognition = void 0;
+	var actions = {
+		recarga: "Recargar",
+		info: "Pregunta"
+	};
+
+	$(document).ready(function () {
+		send(actions[action]);
+	});
+
+	function startRecognition() {
+		recognition = new webkitSpeechRecognition();
+		recognition.continuous = false;
+		recognition.interimResults = false;
+		recognition.onstart = function (event) {
+			respond(messageRecording);
+		};
+		recognition.onresult = function (event) {
+			$("#rec").removeClass("micr-en");
+			recognition.onend = null;
+
+			var text = "";
+			for (var i = event.resultIndex; i < event.results.length; ++i) {
+				text += event.results[i][0].transcript;
+			}
+			setUserConversation(text);
+			send(text);
+			stopRecognition();
+		};
+		recognition.onend = function () {
+			$("#rec").removeClass("micr-en");
+			setMachineConversation(messageCouldntHear);
+			respond(messageCouldntHear);
+			stopRecognition();
+		};
+		recognition.lang = "es-COL";
+		recognition.start();
+	}
+
+	function stopRecognition() {
+		if (recognition) {
+			recognition.stop();
+			recognition = null;
+		}
+	}
+	function switchRecognition() {
+		$("#rec").addClass("micr-en");
+		if (recognition) {
+			stopRecognition();
+		} else {
+			startRecognition();
+		}
+	}
+
+	function send(text) {
+		fetch(baseUrl + 'query?v=' + v, {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json; charset=utf-8',
+				'Authorization': 'Bearer ' + developerToken
+			},
+			body: JSON.stringify({ query: text, lang: "es", sessionId: "yaydevdiner" })
+		}).then(function (res) {
+			return res.json();
+		}).then(function (data) {
+			return prepareResponse(data);
+		}).catch(function (error) {
+			console.log(error);
+			respond("Oh no! Ha habido un error interno, intentalo nuevamente");
+		});
+	}
+	function prepareResponse(val) {
+		console.log("VAL---------->", val);
+		var spokenResponse = val.result.fulfillment.speech;
+		respond(spokenResponse);
+	}
+
+	function respond(val) {
+		var text = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+
+		if (val == "") {
+			val = messageSorry;
+		}
+		if (val !== messageRecording) {
+			window.utterances = [];
+			var msg = new SpeechSynthesisUtterance();
+			msg.voiceURI = "native";
+			msg.text = val;
+			msg.lang = "es-COL";
+			msg.onstart = function (event) {
+				console.log("Empece a hablar");
+			};
+			msg.onend = function (event) {
+				console.log("termine de hablar");
+				if (text !== "") {
+					send(text);
+				}
+			};
+			window.utterances.push(msg);
+			window.speechSynthesis.speak(msg);
+
+			setMachineConversation(val);
+		}
+	}
+
+	function setUserConversation(text) {
+		$("#dialog").append('<div class=\'user\'>' + text + '</div>');
+	}
+
+	function setMachineConversation(text) {
+		$("#dialog").append('<div class=\'machine\'>' + text + '</div>');
+	}
+
+	return (0, _layout2.default)(el);
+}
+
+},{"../layout":22,"yo-yo":16}]},{},[21]);

@@ -1,53 +1,48 @@
 import yo from 'yo-yo';
 import layout from '../layout';
 
-export default function userPageTemplate(plan){
-	var opc = [
-		{
-			dialogflow: "hola tigo",
-			text: "Hola! Bienvenido a tigo voz"
-		},
-		{
-			dialogflow: "Recargar 5000",
-			text: "Hola! Veo que quieres recargar 5000 pesos"
-		},
-		{
-			dialogflow: "Recargar 20000",
-			text: "Hola! Veo que quieres recargar 20000 pesos"
-		},
-		{
-			dialogflow: "Recargar 30000",
-			text: "Hola! Veo que quieres recargar 30000 pesos"
-		}
-	];
-
+export default function userPageTemplate(action){
 	var el = yo`
-	<div class='container'>
+	<div class='container timeline'>
 		<div class='bg'>
-			<div class='logo-tigo'>
-				<img src='/images/tigo.png'>
+			<div class='nav-content'>
+				<nav>
+					<div class="nav-wrapper custom-bg">
+				  		<a href="#!" class="logo-tigo"><img src='/images/tigo.png' class='logo-tigo' /></a>
+				  		<ul class="right hide-on-med-and-down icon-size">
+				    		<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>
+				    		<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+				  		</ul>
+					</div>
+				</nav>
 			</div>
 			<div class='dialog-container'>
 				<div class='dialog' id='dialog'></div>
 			</div>
-			<div class='clear'></div>
-			<div class='rec-btn'>
+			<div class='rec-btn2'>
 				<div class='micr' id='rec' onclick=${switchRecognition}><i class="fa fa-microphone" aria-hidden="true"></i></div>
-				<div class='btn-text'><b>Contectado a TIGO</b></div>
 			</div>
 		</div>
 	</div>
 	`;
 
-	var v = "20170516";
-	var accessToken = "8cd79128d3d946f085969c75ea181633";
-	var developerToken = "492c21e9cf5d47bbb94f6dcbdce5b1b8";
-	var baseUrl = "https://api.dialogflow.com/v1/";
-	var messageRecording = "Escuchando...";
-	var messageCouldntHear = "No pude oirte, ¿Puedes decirlo de nuevo?";
-	var messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
-	var messageSorry = "Lo siento, no tengo una respuesta a esto";
-	var recognition;
+	const v = "20170516";
+	const accessToken = "8cd79128d3d946f085969c75ea181633";
+	const developerToken = "492c21e9cf5d47bbb94f6dcbdce5b1b8";
+	const baseUrl = "https://api.dialogflow.com/v1/";
+	let messageRecording = "Escuchando...";
+	let messageCouldntHear = "No pude oirte, ¿Puedes decirlo de nuevo?";
+	let messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
+	let messageSorry = "Lo siento, no tengo una respuesta a esto";
+	let recognition;
+	const actions = {
+		recarga: "Recargar",
+		info: "Pregunta"
+	};
+
+	$(document).ready(function() {
+		send(actions[action]);
+	});
 
 	function startRecognition() {
 	    recognition = new webkitSpeechRecognition();
@@ -64,11 +59,13 @@ export default function userPageTemplate(plan){
 	        for (var i = event.resultIndex; i < event.results.length; ++i) {
 	            text += event.results[i][0].transcript;
 	        }
+	        setUserConversation(text);
 	        send(text);
 	        stopRecognition();
 	    };
 	    recognition.onend = function() {
 	    	$("#rec").removeClass("micr-en");
+	    	setMachineConversation(messageCouldntHear);
 	        respond(messageCouldntHear);
 	        stopRecognition();
 	    };
@@ -124,7 +121,7 @@ export default function userPageTemplate(plan){
 	        msg.text = val;
 	        msg.lang = "es-COL";
 	        msg.onstart = event=>{
-            	console.log("Empece a hablar");
+	        	console.log("Empece a hablar");
 	        };
 	        msg.onend = event=>{
 	            console.log("termine de hablar");
@@ -133,21 +130,19 @@ export default function userPageTemplate(plan){
 	            }	           	
 	        };
 	        window.utterances.push(msg);
-        	window.speechSynthesis.speak(msg);
+	    	window.speechSynthesis.speak(msg);
 
-        	setConversation(val);
+	    	setMachineConversation(val);
 	    }
 	}
 
-	function setConversation(text){
-		$("#dialog").append(`<div>${text}</div>`)
+	function setUserConversation(text){
+		$("#dialog").append(`<div class='user'>${text}</div>`);
 	}
 
-	window.onload = ()=>{
-		respond(opc[plan].text, opc[plan].dialogflow);
-	}	
+	function setMachineConversation(text){
+		$("#dialog").append(`<div class='machine'>${text}</div>`);
+	}
 
 	return layout(el);
 }
-
-	

@@ -1,11 +1,10 @@
-var page = require('page');
-var empty = require('empty-element');
-var title = require('title');
-var header = require('../header');
-var template = require('./template');
+import page from 'page';
+import empty from 'empty-element';
+import title from 'title';
+import template from './template';
 
-page('/', header, (ctx,next)=>{
-	title('Platzigram');
+page('/', (ctx,next)=>{
+	title('Tigo voz');
 	var main = document.getElementById('main-container');
 
 	empty(main).appendChild(template());

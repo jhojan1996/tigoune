@@ -12,10 +12,10 @@ app.use(bodyParser.urlencoded({limit: "100mb", extended: true, parameterLimit:50
 app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
-	res.render('index', {title: 'Home'});
+	res.render('index');
 })
 
-app.get('/listen/:product', (req, res)=>{
+app.get('/listen/:action', (req, res)=>{
 	res.render('index');
 });
 
