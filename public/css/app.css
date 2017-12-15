@@ -7076,13 +7076,13 @@ ul.own-list li::before {
     border-radius: 80px;
     width: 120px;
     font-size: 3em;
-    padding: 4%;
+    padding: 5%;
     margin: 0 auto;
     cursor: pointer;
-    background: -webkit-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
-    background: -o-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
-    background: -moz-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
-    background: linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8)); }
+    background: -webkit-linear-gradient(to bottom right, #a23bd3, rgba(212, 210, 160, 0.8));
+    background: -o-linear-gradient(to bottom right, #a23bd3, rgba(212, 210, 160, 0.8));
+    background: -moz-linear-gradient(to bottom right, #a23bd3, rgba(212, 210, 160, 0.8));
+    background: linear-gradient(to bottom right, #a23bd3, rgba(212, 210, 160, 0.8)); }
   .rec-btn .btn-text, .rec-btn2 .btn-text {
     margin-top: 2%;
     font-size: 1.5em; }
@@ -7128,7 +7128,7 @@ ul.own-list li::before {
 
 .index-content {
   position: relative;
-  width: 60%;
+  width: 42%;
   border-radius: 10px;
   padding: 2%;
   border: 1px solid #0580BD;
@@ -7141,13 +7141,14 @@ ul.own-list li::before {
   position: relative; }
 
 .action-content {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  margin-top: 10%; }
   .action-content a {
     color: #FFFFFF;
     font-size: 1.3em;
     margin-left: 3%; }
   .action-content section {
-    width: 50%;
+    width: 70%;
     margin: 0 auto; }
 
 .border-bottom {

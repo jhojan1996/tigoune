@@ -2657,7 +2657,9 @@ var _template = require('./template');
 
 var _template2 = _interopRequireDefault(_template);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
 
 (0, _page2.default)('/', function (ctx, next) {
 	(0, _title2.default)('Tigo voz');
@@ -2673,7 +2675,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>TigoVOZ</div>\n\t\t\t\t<div class=\'submain-title\'>Inteligencia artificial / Lenguaje natural</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Compra Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Informacion de producto <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>TigoVOZ</div>\n\t\t\t\t<div class=\'submain-title\'>Inteligencia artificial / Lenguaje natural</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Compra Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Informacion de producto <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t']);
+var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>Asistente digital TIGO</div>\n\t\t\t\t<div class=\'submain-title\'>Desarrollado con inteligencia artificial</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Obtener informaci\xF3n de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>Asistente digital TIGO</div>\n\t\t\t\t<div class=\'submain-title\'>Desarrollado con inteligencia artificial</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Obtener informaci\xF3n de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t']);
 
 exports.default = body;
 
@@ -2685,9 +2687,13 @@ var _layout = require('../layout');
 
 var _layout2 = _interopRequireDefault(_layout);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+function _taggedTemplateLiteral(strings, raw) {
+	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
 
 function body() {
 	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
@@ -2702,208 +2708,9 @@ function body() {
 	var messageSorry = "Lo siento, no tengo una respuesta a esto";
 	var recognition = void 0;
 
-	function startRecognition() {
-		recognition = new webkitSpeechRecognition();
-		recognition.continuous = false;
-		recognition.interimResults = false;
-		recognition.onstart = function (event) {
-			respond(messageRecording);
-		};
-		recognition.onresult = function (event) {
-			$("#rec").removeClass("micr-en");
-			recognition.onend = null;
-
-			var text = "";
-			for (var i = event.resultIndex; i < event.results.length; ++i) {
-				text += event.results[i][0].transcript;
-			}
-			setUserConversation(text);
-			send(text);
-			stopRecognition();
-		};
-		recognition.onend = function () {
-			$("#rec").removeClass("micr-en");
-			setMachineConversation(messageCouldntHear);
-			respond(messageCouldntHear);
-			stopRecognition();
-		};
-		recognition.lang = "es-COL";
-		recognition.start();
-	}
-
-	function stopRecognition() {
-		if (recognition) {
-			recognition.stop();
-			recognition = null;
-		}
-	}
-	function switchRecognition() {
-		$("#rec").addClass("micr-en");
-		if (recognition) {
-			stopRecognition();
-		} else {
-			startRecognition();
-		}
-	}
-
-	function send(text) {
-		fetch(baseUrl + 'query?v=' + v, {
-			method: "POST",
-			headers: {
-				'Content-Type': 'application/json; charset=utf-8',
-				'Authorization': 'Bearer ' + developerToken
-			},
-			body: JSON.stringify({ query: text, lang: "es", sessionId: "yaydevdiner" })
-		}).then(function (res) {
-			return res.json();
-		}).then(function (data) {
-			return prepareResponse(data);
-		}).catch(function (error) {
-			console.log(error);
-			respond("Oh no! Ha habido un error interno, intentalo nuevamente");
-		});
-	}
-	function prepareResponse(val) {
-		console.log("VAL---------->", val);
-		var spokenResponse = val.result.fulfillment.speech;
-		respond(spokenResponse);
-	}
-
-	function respond(val) {
-		var text = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
-
-		if (val == "") {
-			val = messageSorry;
-		}
-		if (val !== messageRecording) {
-			window.utterances = [];
-			var msg = new SpeechSynthesisUtterance();
-			msg.voiceURI = "native";
-			msg.text = val;
-			msg.lang = "es-COL";
-			msg.onstart = function (event) {
-				console.log("Empece a hablar");
-			};
-			msg.onend = function (event) {
-				console.log("termine de hablar");
-				if (text !== "") {
-					send(text);
-				}
-			};
-			window.utterances.push(msg);
-			window.speechSynthesis.speak(msg);
-
-			setMachineConversation(val);
-		}
-	}
-
-	function setUserConversation(text) {
-		$("#dialog").append('<div class=\'user\'>' + text + '</div>');
-	}
-
-	function setMachineConversation(text) {
-		$("#dialog").append('<div class=\'machine\'>' + text + '</div>');
-	}
-
-	return (0, _layout2.default)(el);
-}
-
-},{"../layout":22,"yo-yo":16}],20:[function(require,module,exports){
-"use strict";
-
-},{}],21:[function(require,module,exports){
-'use strict';
-
-var page = require('page');
-
-require('./body');
-require('./listen');
-require('./footer');
-
-page();
-
-},{"./body":18,"./footer":20,"./listen":23,"page":13}],22:[function(require,module,exports){
-'use strict';
-
-var _templateObject = _taggedTemplateLiteral(['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t'], ['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var yo = require('yo-yo');
-module.exports = function layout(content) {
-	return yo(_templateObject, content);
-};
-
-},{"yo-yo":16}],23:[function(require,module,exports){
-'use strict';
-
-var _page = require('page');
-
-var _page2 = _interopRequireDefault(_page);
-
-var _title = require('title');
-
-var _title2 = _interopRequireDefault(_title);
-
-var _emptyElement = require('empty-element');
-
-var _emptyElement2 = _interopRequireDefault(_emptyElement);
-
-var _template = require('./template');
-
-var _template2 = _interopRequireDefault(_template);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _page2.default)('/listen/:action', function (ctx, next) {
-	//ctx.params.action
-	(0, _title2.default)(ctx.params.action);
-	var main = document.getElementById('main-container');
-	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.params.action));
-});
-
-},{"./template":24,"empty-element":4,"page":13,"title":15}],24:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'nav-content\'>\n\t\t\t\t<nav>\n\t\t\t\t\t<div class="nav-wrapper custom-bg">\n\t\t\t\t  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n\t\t\t\t  \t\t<ul class="right hide-on-med-and-down icon-size">\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n\t\t\t\t  \t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</nav>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'rec-btn2\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'nav-content\'>\n\t\t\t\t<nav>\n\t\t\t\t\t<div class="nav-wrapper custom-bg">\n\t\t\t\t  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n\t\t\t\t  \t\t<ul class="right hide-on-med-and-down icon-size">\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n\t\t\t\t  \t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</nav>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'rec-btn2\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t']);
-
-exports.default = userPageTemplate;
-
-var _yoYo = require('yo-yo');
-
-var _yoYo2 = _interopRequireDefault(_yoYo);
-
-var _layout = require('../layout');
-
-var _layout2 = _interopRequireDefault(_layout);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-function userPageTemplate(action) {
-	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
-
-	var v = "20170516";
-	var accessToken = "8cd79128d3d946f085969c75ea181633";
-	var developerToken = "492c21e9cf5d47bbb94f6dcbdce5b1b8";
-	var baseUrl = "https://api.dialogflow.com/v1/";
-	var messageRecording = "Escuchando...";
-	var messageCouldntHear = "No pude oirte, ¿Puedes decirlo de nuevo?";
-	var messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
-	var messageSorry = "Lo siento, no tengo una respuesta a esto";
-	var recognition = void 0;
-	var actions = {
-		recarga: "Recargar",
-		info: "Pregunta"
-	};
-
 	$(document).ready(function () {
-		send(actions[action]);
+		window.speechSynthesis.cancel();
+		respond("Hola soy el asistente digital de tigo, estoy aquí para ayudarte. Por favor elige una de la siguientes experiencias: Comprar el servicio internet, recarga el celular y obtener información de nuestros productos. Cual deseas elegír.");
 	});
 
 	function startRecognition() {
@@ -2982,10 +2789,235 @@ function userPageTemplate(action) {
 		if (val !== messageRecording) {
 			window.utterances = [];
 			var msg = new SpeechSynthesisUtterance();
+			var voices = window.speechSynthesis.getVoices();
 			msg.voiceURI = "native";
 			msg.text = val;
-			msg.lang = "es-COL";
+			msg.lang = "es-US";
+			msg.voice = voices[7];
 			msg.onstart = function (event) {
+				console.log("Empece a hablar");
+			};
+			msg.onend = function (event) {
+				console.log("termine de hablar");
+				if (text !== "") {
+					send(text);
+				}
+			};
+			window.utterances.push(msg);
+			window.speechSynthesis.speak(msg);
+
+			setMachineConversation(val);
+		}
+	}
+
+	function setUserConversation(text) {
+		$("#dialog").append('<div class=\'user\'>' + text + '</div>');
+	}
+
+	function setMachineConversation(text) {
+		$("#dialog").append('<div class=\'machine\'>' + text + '</div>');
+	}
+
+	return (0, _layout2.default)(el);
+}
+
+},{"../layout":22,"yo-yo":16}],20:[function(require,module,exports){
+"use strict";
+
+},{}],21:[function(require,module,exports){
+'use strict';
+
+var page = require('page');
+
+require('./body');
+require('./listen');
+require('./footer');
+
+page();
+
+},{"./body":18,"./footer":20,"./listen":23,"page":13}],22:[function(require,module,exports){
+'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t'], ['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t']);
+
+function _taggedTemplateLiteral(strings, raw) {
+	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+var yo = require('yo-yo');
+module.exports = function layout(content) {
+	return yo(_templateObject, content);
+};
+
+},{"yo-yo":16}],23:[function(require,module,exports){
+'use strict';
+
+var _page = require('page');
+
+var _page2 = _interopRequireDefault(_page);
+
+var _title = require('title');
+
+var _title2 = _interopRequireDefault(_title);
+
+var _emptyElement = require('empty-element');
+
+var _emptyElement2 = _interopRequireDefault(_emptyElement);
+
+var _template = require('./template');
+
+var _template2 = _interopRequireDefault(_template);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+(0, _page2.default)('/listen/:action', function (ctx, next) {
+	//ctx.params.action
+	(0, _title2.default)(ctx.params.action);
+	var main = document.getElementById('main-container');
+	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.params.action));
+});
+
+},{"./template":24,"empty-element":4,"page":13,"title":15}],24:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'nav-content\'>\n\t\t\t\t<nav>\n\t\t\t\t\t<div class="nav-wrapper custom-bg">\n\t\t\t\t  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n\t\t\t\t  \t\t<ul class="right hide-on-med-and-down icon-size">\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n\t\t\t\t    \t\t<li><a href="/"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n\t\t\t\t  \t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</nav>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'rec-btn2\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'nav-content\'>\n\t\t\t\t<nav>\n\t\t\t\t\t<div class="nav-wrapper custom-bg">\n\t\t\t\t  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n\t\t\t\t  \t\t<ul class="right hide-on-med-and-down icon-size">\n\t\t\t\t    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n\t\t\t\t    \t\t<li><a href="/"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n\t\t\t\t  \t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</nav>\n\t\t\t</div>\n\t\t\t<div class=\'dialog-container\'>\n\t\t\t\t<div class=\'dialog\' id=\'dialog\'></div>\n\t\t\t</div>\n\t\t\t<div class=\'rec-btn2\'>\n\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t']);
+
+exports.default = userPageTemplate;
+
+var _yoYo = require('yo-yo');
+
+var _yoYo2 = _interopRequireDefault(_yoYo);
+
+var _layout = require('../layout');
+
+var _layout2 = _interopRequireDefault(_layout);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _taggedTemplateLiteral(strings, raw) {
+	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+function userPageTemplate(action) {
+	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
+
+	var v = "20170516";
+	var accessToken = "8cd79128d3d946f085969c75ea181633";
+	var developerToken = "492c21e9cf5d47bbb94f6dcbdce5b1b8";
+	var baseUrl = "https://api.dialogflow.com/v1/";
+	var messageRecording = "Escuchando...";
+	var messageCouldntHear = "No pude oirte, ¿Puedes decirlo de nuevo?";
+	var messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
+	var messageSorry = "Lo siento, no tengo una respuesta a esto";
+	var recognition = void 0;
+	var setAct = "";
+	var setPar = "";
+	var actions = {
+		recarga: "Recargar",
+		info: "Pregunta"
+	};
+
+	$(document).ready(function () {
+		window.speechSynthesis.cancel();
+		send(actions[action]);
+	});
+
+	function startRecognition() {
+		recognition = new webkitSpeechRecognition();
+		recognition.continuous = false;
+		recognition.interimResults = false;
+		recognition.onstart = function (event) {
+			respond(messageRecording);
+		};
+		recognition.onresult = function (event) {
+			$("#rec").removeClass("micr-en");
+			recognition.onend = null;
+
+			var text = "";
+			for (var i = event.resultIndex; i < event.results.length; ++i) {
+				text += event.results[i][0].transcript;
+			}
+
+			console.log("Events.results ------------------>", event.results);
+
+			setUserConversation(text);
+			send(text);
+			stopRecognition();
+		};
+		recognition.onend = function () {
+			$("#rec").removeClass("micr-en");
+			setMachineConversation(messageCouldntHear);
+			respond(messageCouldntHear);
+			stopRecognition();
+		};
+		recognition.lang = "es-COL";
+		recognition.start();
+	}
+
+	function stopRecognition() {
+		if (recognition) {
+			recognition.stop();
+			recognition = null;
+		}
+	}
+	function switchRecognition() {
+		$("#rec").addClass("micr-en");
+		if (recognition) {
+			stopRecognition();
+		} else {
+			startRecognition();
+		}
+	}
+
+	function send(text) {
+		fetch(baseUrl + 'query?v=' + v, {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json; charset=utf-8',
+				'Authorization': 'Bearer ' + developerToken
+			},
+			body: JSON.stringify({ query: text, lang: "es", sessionId: "yaydevdiner" })
+		}).then(function (res) {
+			return res.json();
+		}).then(function (data) {
+			return prepareResponse(data);
+		}).catch(function (error) {
+			console.log(error);
+			respond("Oh no! Ha habido un error interno, intentalo nuevamente");
+		});
+	}
+	function prepareResponse(val) {
+		console.log("VAL---------->", val);
+		var spokenResponse = val.result.fulfillment.speech;
+		setAct = val.result.action;
+		setPar = val.result.parameters;
+		respond(spokenResponse);
+	}
+
+	function respond(val) {
+		var text = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+
+		if (val == "") {
+			val = messageSorry;
+		}
+		if (val !== messageRecording) {
+			window.utterances = [];
+			var msg = new SpeechSynthesisUtterance();
+			var voices = window.speechSynthesis.getVoices();
+			msg.voiceURI = "native";
+			msg.text = val;
+			msg.lang = "es-US";
+			msg.voice = voices[7];
+			msg.onstart = function (event) {
+				console.log("getVoices----------->", window.speechSynthesis.getVoices());
 				console.log("Empece a hablar");
 			};
 			msg.onend = function (event) {

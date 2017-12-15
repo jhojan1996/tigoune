@@ -228,13 +228,13 @@ ul.own-list li::before {
 		border-radius: 80px;
 		width: 120px;
 		font-size: 3em;
-		padding: 4%;
+		padding: 5%;
 		margin: 0 auto;
 		cursor: pointer;
-		background: -webkit-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
-	    background: -o-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
-	    background: -moz-linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
-	    background: linear-gradient(rgba(158, 48, 224, 0.8), rgba(138, 205, 132, 0.8));
+		background: -webkit-linear-gradient(to bottom right, rgba(162, 59, 211, 1), rgba(212, 210, 160, 0.8));
+	    background: -o-linear-gradient(to bottom right, rgba(162, 59, 211, 1), rgba(212, 210, 160, 0.8));
+	    background: -moz-linear-gradient(to bottom right, rgba(162, 59, 211, 1), rgba(212, 210, 160, 0.8));
+	    background: linear-gradient(to bottom right, rgba(162, 59, 211, 1), rgba(212, 210, 160, 0.8));
 	}
 	.btn-text{
 		margin-top: 2%;
@@ -292,7 +292,7 @@ ul.own-list li::before {
 
 .index-content{
 	position: relative;
-	width: 60%;
+	width: 42%;
 	border-radius: 10px;
 	padding: 2%;
 	border: 1px solid #0580BD;
@@ -307,7 +307,8 @@ ul.own-list li::before {
 }
 
 .action-content{
-	color: $white-color;	
+	color: $white-color;
+	margin-top: 10%;
 	a{
 		color: $white-color;
 		font-size: 1.3em;
@@ -315,7 +316,7 @@ ul.own-list li::before {
 	}
 
 	section{
-		width: 50%;
+		width: 70%;
 		margin: 0 auto;; 
 	}
 }

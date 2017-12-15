@@ -8,9 +8,14 @@ exports.recargas = (req, res)=>{
     let text;
     let setContext;
     let numeroCelular = '';
-
+    let number;
+    let number2;
+    let number3;
     if(typeof req.body.result.contexts[0].parameters.numero_celular.number !== 'undefined'){
-        numeroCelular = `${req.body.result.contexts[0].parameters.numero_celular.number} ${req.body.result.contexts[0].parameters.numero_celular.number2} ${req.body.result.contexts[0].parameters.numero_celular.number3}`;
+        number = req.body.result.contexts[0].parameters.numero_celular.number;
+        number2 = req.body.result.contexts[0].parameters.numero_celular.number2;
+        number3 = req.body.result.contexts[0].parameters.numero_celular.number3;
+        numeroCelular = req.body.result.contexts[0].parameters["numero_celular.original"];
     }
 
     if(valorRecarga !== ''){
@@ -20,7 +25,7 @@ exports.recargas = (req, res)=>{
             if(confirm !== ''){
                 if(confirm === 'si' || confirm === 'sí'){
                 	if(claveCuenta){
-                		text = `Tu recarga fue realizada con exito`;
+                		text = `Tu recarga fue realizada con éxito`;
                 		setContext = [{"name":"recarga", "lifespan":0, "parameters":{}}];
                 		response = {
                             text: text
@@ -33,13 +38,13 @@ exports.recargas = (req, res)=>{
                             source: 'recargas'
                         });
                 	}else{
-                		text = `Para finalizar tu compra, por favor ingresa tu clave de 4 digitos en la caja de texto`;
+                		text = `Para finalizar tu compra, por favor ingresa tu clave de 4 dígitos en la caja de texto`;
                 		 setContext = [
 		                    {
 		                        "name":"recarga", 
 		                        "lifespan":1, 
 		                        "parameters":{
-		                            "numero_celular": numeroCelular, 
+		                            "numero_celular": {"number":number, "number2":number2, "number3":number3}, 
 		                            "valor_recargar": {"number":valorRecarga}, 
 		                            "confirm_recarga": confirm,
 		                            "clave_cuenta": ""
@@ -73,13 +78,13 @@ exports.recargas = (req, res)=>{
                 }
             }else{
                 console.log("Confirmacion no enviada");
-                text = `Ok. ¿Deseas realizar una recarga por valor de $${valorRecarga} a tu número de celular ${numeroCelular}?`;
+                text = `Ok. ¿Deseas realizar una recarga por valor de ${valorRecarga} pesos a tu número de celular ${numeroCelular}?`;
                 setContext = [
                     {
                         "name":"recarga", 
                         "lifespan":1, 
                         "parameters":{
-                            "numero_celular": numeroCelular, 
+                            "numero_celular": {"number":number, "number2":number2, "number3":number3}, 
                             "valor_recargar": {"number":valorRecarga}, 
                             "confirm_recarga": "",
                             "clave_cuenta": ""

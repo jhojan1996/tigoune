@@ -6,17 +6,17 @@ export default function body(){
 	<div class='container'>
 		<div class='bg'>
 			<div class='index-content'>
-				<div class='main-title'>TigoVOZ</div>
-				<div class='submain-title'>Inteligencia artificial / Lenguaje natural</div>
+				<div class='main-title'>Asistente digital TIGO</div>
+				<div class='submain-title'>Desarrollado con inteligencia artificial</div>
 				<div class='rec-btn'>
 					<div class='micr' id='rec' onclick=${switchRecognition}><i class="fa fa-microphone" aria-hidden="true"></i></div>
 				</div>
 				<div class='action-content'>
 					<section>
 						<div class='submain-title border-bottom padd'>Experiencias</div>					
-						<div class='padd border-bottom' id='act1'><a href='#'>Compra Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
-						<div class='padd border-bottom' id='act2'><a href='/listen/recarga'>Recarga <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
-						<div class='padd border-bottom' id='act3'><a href='/listen/info'>Informacion de producto <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
+						<div class='padd border-bottom' id='act1'><a href='#'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
+						<div class='padd border-bottom' id='act2'><a href='/listen/recarga'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
+						<div class='padd border-bottom' id='act3'><a href='/listen/info'>Obtener información de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
 						<div class='clear'></div>
 					</section>
 				</div>
@@ -34,6 +34,11 @@ export default function body(){
 	let messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
 	let messageSorry = "Lo siento, no tengo una respuesta a esto";
 	let recognition;
+
+	$(document).ready(function() {
+		window.speechSynthesis.cancel();
+		respond("Hola soy el asistente digital de tigo, estoy aquí para ayudarte. Por favor elige una de la siguientes experiencias: Comprar el servicio internet, recarga el celular y obtener información de nuestros productos. Cual deseas elegír.");
+	});
 
 	function startRecognition() {
 	    recognition = new webkitSpeechRecognition();
@@ -108,9 +113,11 @@ export default function body(){
 	    if (val !== messageRecording) {
 	    	window.utterances = [];
 	        const msg = new SpeechSynthesisUtterance();
+	        const voices = window.speechSynthesis.getVoices();
 	        msg.voiceURI = "native";
 	        msg.text = val;
-	        msg.lang = "es-COL";
+	        msg.lang = "es-US";
+	        msg.voice = voices[7];
 	        msg.onstart = event=>{
 	        	console.log("Empece a hablar");
 	        };

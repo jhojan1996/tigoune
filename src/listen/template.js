@@ -11,7 +11,7 @@ export default function userPageTemplate(action){
 				  		<a href="#!" class="logo-tigo"><img src='/images/tigo.png' class='logo-tigo' /></a>
 				  		<ul class="right hide-on-med-and-down icon-size">
 				    		<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>
-				    		<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+				    		<li><a href="/"><i class="fa fa-times" aria-hidden="true"></i></a></li>
 				  		</ul>
 					</div>
 				</nav>
@@ -35,12 +35,15 @@ export default function userPageTemplate(action){
 	let messageInternalError = "Oh no! Ha habido un error interno, intentalo nuevamente";
 	let messageSorry = "Lo siento, no tengo una respuesta a esto";
 	let recognition;
+	let setAct = "";
+	let setPar = "";
 	const actions = {
 		recarga: "Recargar",
 		info: "Pregunta"
 	};
 
 	$(document).ready(function() {
+		window.speechSynthesis.cancel();
 		send(actions[action]);
 	});
 
@@ -59,6 +62,9 @@ export default function userPageTemplate(action){
 	        for (var i = event.resultIndex; i < event.results.length; ++i) {
 	            text += event.results[i][0].transcript;
 	        }
+
+	        console.log("Events.results ------------------>", event.results);
+
 	        setUserConversation(text);
 	        send(text);
 	        stopRecognition();
@@ -107,6 +113,8 @@ export default function userPageTemplate(action){
 	function prepareResponse(val) {
 		console.log("VAL---------->",val)
 	    var spokenResponse = val.result.fulfillment.speech;
+	    setAct = val.result.action;
+	    setPar = val.result.parameters;
 	    respond(spokenResponse);
 	}
 
@@ -117,10 +125,13 @@ export default function userPageTemplate(action){
 	    if (val !== messageRecording) {
 	    	window.utterances = [];
 	        const msg = new SpeechSynthesisUtterance();
+	        const voices = window.speechSynthesis.getVoices();
 	        msg.voiceURI = "native";
 	        msg.text = val;
-	        msg.lang = "es-COL";
+	        msg.lang = "es-US";
+	        msg.voice = voices[7];
 	        msg.onstart = event=>{
+	        	console.log("getVoices----------->", window.speechSynthesis.getVoices());
 	        	console.log("Empece a hablar");
 	        };
 	        msg.onend = event=>{

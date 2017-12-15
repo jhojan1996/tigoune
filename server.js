@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const recargas = require('./actions/recargas');
+const info = require('./actions/info');
 
 
 const app = express();
@@ -34,6 +35,11 @@ app.post('/ai', (req, res)=>{
         case 'recarga':
            console.log("Inicio recargas");
            recargas.recargas(req, res);
+        break;
+
+        case 'info':
+            console.log("Inicio info");
+            info.info(req, res);
         break;
     }
 });
