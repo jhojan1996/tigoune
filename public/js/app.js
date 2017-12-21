@@ -2657,14 +2657,11 @@ var _template = require('./template');
 
 var _template2 = _interopRequireDefault(_template);
 
-function _interopRequireDefault(obj) {
-	return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _page2.default)('/', function (ctx, next) {
 	(0, _title2.default)('Tigo voz');
 	var main = document.getElementById('main-container');
-
 	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)());
 });
 
@@ -2675,7 +2672,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>Asistente digital TIGO</div>\n\t\t\t\t<div class=\'submain-title\'>Desarrollado con inteligencia artificial</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Obtener informaci\xF3n de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>Asistente digital TIGO</div>\n\t\t\t\t<div class=\'submain-title\'>Desarrollado con inteligencia artificial</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'#\'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Obtener informaci\xF3n de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t']);
+var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>Asistente digital TIGO</div>\n\t\t\t\t<div class=\'submain-title\'>Desarrollado con inteligencia artificial</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'/plan\'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Obtener informaci\xF3n de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container\'>\n\t\t<div class=\'bg\'>\n\t\t\t<div class=\'index-content\'>\n\t\t\t\t<div class=\'main-title\'>Asistente digital TIGO</div>\n\t\t\t\t<div class=\'submain-title\'>Desarrollado con inteligencia artificial</div>\n\t\t\t\t<div class=\'rec-btn\'>\n\t\t\t\t\t<div class=\'micr\' id=\'rec\' onclick=', '><i class="fa fa-microphone" aria-hidden="true"></i></div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\'action-content\'>\n\t\t\t\t\t<section>\n\t\t\t\t\t\t<div class=\'submain-title border-bottom padd\'>Experiencias</div>\t\t\t\t\t\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act1\'><a href=\'/plan\'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act2\'><a href=\'/listen/recarga\'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'padd border-bottom\' id=\'act3\'><a href=\'/listen/info\'>Obtener informaci\xF3n de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>\n\t\t\t\t\t\t<div class=\'clear\'></div>\n\t\t\t\t\t</section>\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\n\t</div>\n\t']);
 
 exports.default = body;
 
@@ -2687,13 +2684,9 @@ var _layout = require('../layout');
 
 var _layout2 = _interopRequireDefault(_layout);
 
-function _interopRequireDefault(obj) {
-	return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function body() {
 	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
@@ -2821,35 +2814,52 @@ function body() {
 	return (0, _layout2.default)(el);
 }
 
-},{"../layout":22,"yo-yo":16}],20:[function(require,module,exports){
+},{"../layout":23,"yo-yo":16}],20:[function(require,module,exports){
 "use strict";
 
 },{}],21:[function(require,module,exports){
+'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['\n<nav>\n\t<div class="nav-wrapper custom-bg">\n  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n  \t\t<ul class="right hide-on-med-and-down icon-size">\n    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n    \t\t<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n  \t\t</ul>\n\t</div>\n</nav>\n'], ['\n<nav>\n\t<div class="nav-wrapper custom-bg">\n  \t\t<a href="#!" class="logo-tigo"><img src=\'/images/tigo.png\' class=\'logo-tigo\' /></a>\n  \t\t<ul class="right hide-on-med-and-down icon-size">\n    \t\t<li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a></li>\n    \t\t<li><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>\n  \t\t</ul>\n\t</div>\n</nav>\n']);
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var yo = require('yo-yo');
+var empty = require('empty-element');
+
+var el = yo(_templateObject);
+
+module.exports = function (ctx, next) {
+  var container = document.getElementById("header-container");
+  empty(container).appendChild(el);
+  next();
+};
+
+},{"empty-element":4,"yo-yo":16}],22:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
 
 require('./body');
 require('./listen');
+require('./plan');
 require('./footer');
 
 page();
 
-},{"./body":18,"./footer":20,"./listen":23,"page":13}],22:[function(require,module,exports){
+},{"./body":18,"./footer":20,"./listen":24,"./plan":26,"page":13}],23:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t'], ['<div class=\'content\'>\n\t\t\t\t\t', '\n\t\t\t</div> \n\t\t\t']);
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 module.exports = function layout(content) {
 	return yo(_templateObject, content);
 };
 
-},{"yo-yo":16}],23:[function(require,module,exports){
+},{"yo-yo":16}],24:[function(require,module,exports){
 'use strict';
 
 var _page = require('page');
@@ -2868,9 +2878,7 @@ var _template = require('./template');
 
 var _template2 = _interopRequireDefault(_template);
 
-function _interopRequireDefault(obj) {
-	return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _page2.default)('/listen/:action', function (ctx, next) {
 	//ctx.params.action
@@ -2879,7 +2887,7 @@ function _interopRequireDefault(obj) {
 	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.params.action));
 });
 
-},{"./template":24,"empty-element":4,"page":13,"title":15}],24:[function(require,module,exports){
+},{"./template":25,"empty-element":4,"page":13,"title":15}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2898,13 +2906,9 @@ var _layout = require('../layout');
 
 var _layout2 = _interopRequireDefault(_layout);
 
-function _interopRequireDefault(obj) {
-	return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-	return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function userPageTemplate(action) {
 	var el = (0, _yoYo2.default)(_templateObject, switchRecognition);
@@ -3015,7 +3019,7 @@ function userPageTemplate(action) {
 			msg.voiceURI = "native";
 			msg.text = val;
 			msg.lang = "es-US";
-			msg.voice = voices[7];
+			msg.voice = voices[6];
 			msg.onstart = function (event) {
 				console.log("getVoices----------->", window.speechSynthesis.getVoices());
 				console.log("Empece a hablar");
@@ -3044,4 +3048,64 @@ function userPageTemplate(action) {
 	return (0, _layout2.default)(el);
 }
 
-},{"../layout":22,"yo-yo":16}]},{},[21]);
+},{"../layout":23,"yo-yo":16}],26:[function(require,module,exports){
+'use strict';
+
+var _page = require('page');
+
+var _page2 = _interopRequireDefault(_page);
+
+var _title = require('title');
+
+var _title2 = _interopRequireDefault(_title);
+
+var _emptyElement = require('empty-element');
+
+var _emptyElement2 = _interopRequireDefault(_emptyElement);
+
+var _header = require('../header');
+
+var _header2 = _interopRequireDefault(_header);
+
+var _template = require('./template');
+
+var _template2 = _interopRequireDefault(_template);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _page2.default)('/plan', _header2.default, function (ctx, next) {
+	//ctx.params.action
+	var main = document.getElementById('main-container');
+	(0, _emptyElement2.default)(main).appendChild((0, _template2.default)(ctx.params.action));
+});
+
+},{"../header":21,"./template":27,"empty-element":4,"page":13,"title":15}],27:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'row\'>\n\t\t\t<div class=\'col s12 m10 l12\'>\n\t\t\t\t<img src=\'images/banner1.jpg\' class=\'full-img\'/>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\'row over\'>\n\t\t\t<div class=\'col s10 m10 offset-m1 l8 offset-l2 center-align\'>\n\t\t\t\t<form enctype=\'multipar/form-data\' class=\'form-upload\' id=\'formUpload\'>\n\t\t\t\t\t<div class=\'main-section\'>\n\t\t\t\t\t\t<div class=\'main-title\'>En TIGO UNE se acabaron las bajas velocidades</div>\n\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t<a href=\'/listen/1\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>5 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 5 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Chatea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Accede a tu email</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Disfruta tus peliculas favoritas</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Realiza videoconferencias</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 5.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/2\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>10 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 10 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido mas pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Contecta varios dispositivos</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 10.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn enabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/3\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>20 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 20 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Conecta tu TV, tablet o m\xF3vil</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido m\xE1s pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 20.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t'], ['\n\t<div class=\'container timeline\'>\n\t\t<div class=\'row\'>\n\t\t\t<div class=\'col s12 m10 l12\'>\n\t\t\t\t<img src=\'images/banner1.jpg\' class=\'full-img\'/>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\'row over\'>\n\t\t\t<div class=\'col s10 m10 offset-m1 l8 offset-l2 center-align\'>\n\t\t\t\t<form enctype=\'multipar/form-data\' class=\'form-upload\' id=\'formUpload\'>\n\t\t\t\t\t<div class=\'main-section\'>\n\t\t\t\t\t\t<div class=\'main-title\'>En TIGO UNE se acabaron las bajas velocidades</div>\n\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t<a href=\'/listen/1\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>5 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 5 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Chatea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Accede a tu email</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Disfruta tus peliculas favoritas</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Realiza videoconferencias</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 5.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/2\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>10 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 10 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido mas pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Contecta varios dispositivos</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 10.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn enabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<a href=\'/listen/3\'>\n\t\t\t\t\t\t\t\t<div class=\'col s12 m4 l4 black-word not-active\'>\n\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'small-title\'><b>Plan</b></div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'plan-name\'><b>20 <br><small class=\'small-plan\'>MEGAS</small></b></div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'plan-content\'>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row>\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>Con 20 Megas puedes: </b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Conecta tu TV, tablet o m\xF3vil</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Videos en HD</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Juega en linea</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Descarga contenido m\xE1s pesado</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\'row\'>\n\t\t\t\t\t\t\t\t\t\t\t<b>velocidad de acceso</b>\n\t\t\t\t\t\t\t\t\t\t\t<ul class=\'own-list\'>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Bajada 20.000 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t\t<li>Subida 1.024 Kbps</li>\n\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\'pay-button\'>\n\t\t\t\t\t\t\t\t\t\t<a class=\'btn custom-btn disabled-cstm\'>COMPRAR <i class="fa fa-microphone" aria-hidden="true"></i></a>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t']);
+
+exports.default = userPageTemplate;
+
+var _yoYo = require('yo-yo');
+
+var _yoYo2 = _interopRequireDefault(_yoYo);
+
+var _layout = require('../layout');
+
+var _layout2 = _interopRequireDefault(_layout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function userPageTemplate(plan) {
+	var el = (0, _yoYo2.default)(_templateObject);
+
+	return (0, _layout2.default)(el);
+}
+
+},{"../layout":23,"yo-yo":16}]},{},[22]);

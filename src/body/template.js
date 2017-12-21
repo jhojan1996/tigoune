@@ -14,7 +14,7 @@ export default function body(){
 				<div class='action-content'>
 					<section>
 						<div class='submain-title border-bottom padd'>Experiencias</div>					
-						<div class='padd border-bottom' id='act1'><a href='#'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
+						<div class='padd border-bottom' id='act1'><a href='/plan'>Comprar el servicio de Internet <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
 						<div class='padd border-bottom' id='act2'><a href='/listen/recarga'>Recarga el celular <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
 						<div class='padd border-bottom' id='act3'><a href='/listen/info'>Obtener información de nuestros productos <i class="fa fa-arrow-right pos-right alpha" aria-hidden="true"></i></a></div>
 						<div class='clear'></div>

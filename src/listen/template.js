@@ -129,7 +129,7 @@ export default function userPageTemplate(action){
 	        msg.voiceURI = "native";
 	        msg.text = val;
 	        msg.lang = "es-US";
-	        msg.voice = voices[7];
+	        msg.voice = voices[6];
 	        msg.onstart = event=>{
 	        	console.log("getVoices----------->", window.speechSynthesis.getVoices());
 	        	console.log("Empece a hablar");

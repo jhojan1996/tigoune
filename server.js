@@ -20,6 +20,32 @@ app.get('/listen/:action', (req, res)=>{
 	res.render('index');
 });
 
+app.get('/plan', (req, res)=>{
+    res.render('index');
+});
+
+app.post('/questions', (req, res)=>{
+    let questionType = req.body.question;
+    let action = (typeof req.body.verbo !== 'undefined') ? req.body.verbo : "";
+    let service = req.body.service;
+    let services = [
+        {
+            name:"internet",
+            info:"Para obtener internet debes llamar a la linea 4541654",
+            hasAdition: false,
+            adition: false
+        },
+        {
+            name:"roaming",
+            info: "Roaming internacional Tigo te permite realizar y recibir llamadas, enviar mensajes de texto y navegar en Internet mientras estas en otro país",
+            hasAdition: true,
+            adition: {
+                text: "Puedes ingresar a la pagina de Tigo en el apartado de Roaming para obtener mas información al respecto"
+            }
+        }
+    ];
+});
+
 app.post('/ai', (req, res)=>{
 	console.log('*** Webhook for dialogflow.com ***');
 

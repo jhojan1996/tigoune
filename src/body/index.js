@@ -6,6 +6,5 @@ import template from './template';
 page('/', (ctx,next)=>{
 	title('Tigo voz');
 	var main = document.getElementById('main-container');
-
 	empty(main).appendChild(template());
 });
