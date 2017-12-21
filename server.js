@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const request = require('request');
 const recargas = require('./actions/recargas');
 const info = require('./actions/info');
 
@@ -25,9 +26,10 @@ app.get('/plan', (req, res)=>{
 });
 
 app.post('/questions', (req, res)=>{
-    let questionType = req.body.question;
+    let questionType = req.body.pregunta;
     let action = (typeof req.body.verbo !== 'undefined') ? req.body.verbo : "";
-    let service = req.body.service;
+    let service = req.body.servicio;
+    let response;
     let services = [
         {
             name:"internet",
@@ -44,6 +46,17 @@ app.post('/questions', (req, res)=>{
             }
         }
     ];
+
+    for (let i = 0; i < services.length; i++) {
+        if(services[i].name === service){
+            response = {
+                text: services[i].info
+            };
+            break;
+        }
+    }
+
+    res.send(response);
 });
 
 app.post('/ai', (req, res)=>{
