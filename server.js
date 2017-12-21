@@ -39,19 +39,27 @@ app.post('/questions', (req, res)=>{
         },
         {
             name:"roaming",
-            info: "Roaming internacional Tigo te permite realizar y recibir llamadas, enviar mensajes de texto y navegar en Internet mientras estas en otro país",
+            info: "Roaming internacional Tigo te permite realizar y recibir llamadas, enviar mensajes de texto y navegar en Internet mientras estás en otro país",
             hasAdition: true,
             adition: {
-                text: "Puedes ingresar a la pagina de Tigo en el apartado de Roaming para obtener mas información al respecto"
+                text: "Cuando llegues a tu destino enciende el equipo terminal móvil. El celular ejecuta la búsqueda de red automáticamente, si Tigo tiene acuerdo de Roaming Internacional con un operador de tu destino. Si no lo hace \n automáticamente, se debe hacer manualmente a una red preferida."
             }
         }
     ];
 
+    console.log("action-------->", action);
+
     for (let i = 0; i < services.length; i++) {
         if(services[i].name === service){
-            response = {
-                text: services[i].info
-            };
+            if(action !== ''){
+                response = {
+                    text: services[i].adition.text
+                };
+            }else{
+                response = {
+                    text: services[i].info
+                };
+            }
             break;
         }
     }

@@ -37,6 +37,7 @@ export default function userPageTemplate(action){
 	let recognition;
 	let setAct = "";
 	let setPar = "";
+	let timeoutResumeInfinity;
 	const actions = {
 		recarga: "Recargar",
 		info: "Pregunta"
@@ -129,13 +130,15 @@ export default function userPageTemplate(action){
 	        msg.voiceURI = "native";
 	        msg.text = val;
 	        msg.lang = "es-US";
-	        msg.voice = voices[6];
+	        msg.voice = voices[7];
 	        msg.onstart = event=>{
 	        	console.log("getVoices----------->", window.speechSynthesis.getVoices());
 	        	console.log("Empece a hablar");
+	        	resumeInfinity();
 	        };
 	        msg.onend = event=>{
 	            console.log("termine de hablar");
+	            clearTimeout(timeoutResumeInfinity);
 	            if(text !== ""){
 	            	send(text);
 	            }	           	
@@ -145,6 +148,11 @@ export default function userPageTemplate(action){
 
 	    	setMachineConversation(val);
 	    }
+	}
+
+	function resumeInfinity() {
+	    window.speechSynthesis.resume();
+	    timeoutResumeInfinity = setTimeout(resumeInfinity, 1000);
 	}
 
 	function setUserConversation(text){

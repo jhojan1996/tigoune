@@ -2703,7 +2703,7 @@ function body() {
 
 	$(document).ready(function () {
 		window.speechSynthesis.cancel();
-		respond("Hola soy el asistente digital de tigo, estoy aquí para ayudarte. Por favor elige una de la siguientes experiencias: Comprar el servicio internet, recarga el celular y obtener información de nuestros productos. Cual deseas elegír.");
+		respond("Hola soy el asistente digital de tigo y estoy aquí para ayudarte. Por favor elige una de la siguientes experiencias: Comprar el servicio internet, recargar el celular y obtener información de nuestros productos. Cual deseas elegír?");
 	});
 
 	function startRecognition() {
@@ -2789,9 +2789,11 @@ function body() {
 			msg.voice = voices[7];
 			msg.onstart = function (event) {
 				console.log("Empece a hablar");
+				resumeInfinity();
 			};
 			msg.onend = function (event) {
 				console.log("termine de hablar");
+				clearTimeout(timeoutResumeInfinity);
 				if (text !== "") {
 					send(text);
 				}
@@ -2801,6 +2803,11 @@ function body() {
 
 			setMachineConversation(val);
 		}
+	}
+
+	function resumeInfinity() {
+		window.speechSynthesis.resume();
+		var timeoutResumeInfinity = setTimeout(resumeInfinity, 1000);
 	}
 
 	function setUserConversation(text) {
@@ -2924,6 +2931,7 @@ function userPageTemplate(action) {
 	var recognition = void 0;
 	var setAct = "";
 	var setPar = "";
+	var timeoutResumeInfinity = void 0;
 	var actions = {
 		recarga: "Recargar",
 		info: "Pregunta"
@@ -3019,13 +3027,15 @@ function userPageTemplate(action) {
 			msg.voiceURI = "native";
 			msg.text = val;
 			msg.lang = "es-US";
-			msg.voice = voices[6];
+			msg.voice = voices[7];
 			msg.onstart = function (event) {
 				console.log("getVoices----------->", window.speechSynthesis.getVoices());
 				console.log("Empece a hablar");
+				resumeInfinity();
 			};
 			msg.onend = function (event) {
 				console.log("termine de hablar");
+				clearTimeout(timeoutResumeInfinity);
 				if (text !== "") {
 					send(text);
 				}
@@ -3035,6 +3045,11 @@ function userPageTemplate(action) {
 
 			setMachineConversation(val);
 		}
+	}
+
+	function resumeInfinity() {
+		window.speechSynthesis.resume();
+		timeoutResumeInfinity = setTimeout(resumeInfinity, 1000);
 	}
 
 	function setUserConversation(text) {

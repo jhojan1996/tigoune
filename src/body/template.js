@@ -37,7 +37,7 @@ export default function body(){
 
 	$(document).ready(function() {
 		window.speechSynthesis.cancel();
-		respond("Hola soy el asistente digital de tigo, estoy aquí para ayudarte. Por favor elige una de la siguientes experiencias: Comprar el servicio internet, recarga el celular y obtener información de nuestros productos. Cual deseas elegír.");
+		respond("Hola soy el asistente digital de tigo y estoy aquí para ayudarte. Por favor elige una de la siguientes experiencias: Comprar el servicio internet, recargar el celular y obtener información de nuestros productos. Cual deseas elegír?");
 	});
 
 	function startRecognition() {
@@ -120,9 +120,11 @@ export default function body(){
 	        msg.voice = voices[7];
 	        msg.onstart = event=>{
 	        	console.log("Empece a hablar");
+	        	resumeInfinity();
 	        };
 	        msg.onend = event=>{
 	            console.log("termine de hablar");
+	            clearTimeout(timeoutResumeInfinity);
 	            if(text !== ""){
 	            	send(text);
 	            }	           	
@@ -132,6 +134,11 @@ export default function body(){
 
 	    	setMachineConversation(val);
 	    }
+	}
+
+	function resumeInfinity() {
+	    window.speechSynthesis.resume();
+	    var timeoutResumeInfinity = setTimeout(resumeInfinity, 1000);
 	}
 
 	function setUserConversation(text){

@@ -1,3 +1,4 @@
+const request = require('request');
 exports.recargas = (req, res)=>{
 	console.log('***** recargas *****');
     let json;
@@ -22,14 +23,29 @@ exports.recargas = (req, res)=>{
                 if(confirmRecarga === 'si'){
                 	if(numeroCuenta){
                 		text = `Tu recarga fue realizada con éxito`;
-                        return res.json({
-                            speech: text,
-                            displayText: text,
-                            messages: {
-                                text: text
-                            },
-                            source: 'recargas'
-                        });
+                        request({
+                            url: 'https://api.dialogflow.com/v1/contexts?sessionId=yaydevdiner',
+                            method: 'DELETE',
+                            headers: {
+                                "Authorization": "Bearer 8cd79128d3d946f085969c75ea181633",
+                                "Content-Type": "application/json"
+                            }
+                        }, (error, response) => {
+                            if (error) {
+                                console.log('Error sending message: ', error);
+                            } else if (response.body.error) {
+                                console.log('Error: ', response.body.error);
+                            } else {
+                                return res.json({
+                                    speech: text,
+                                    displayText: text,
+                                    messages: {
+                                        text: text
+                                    },
+                                    source: 'recarga'
+                                });
+                            }
+                        });                        
                 	}else{
                 		text = `Para finalizar tu compra, por favor dime la clave de 4 dígitos de tu cuenta Bancolombia`;
 		                return res.json({
@@ -43,13 +59,28 @@ exports.recargas = (req, res)=>{
                 	}                     
                 }else{
                     text = `La recarga no fue realizada, ¿qué más deseas hacer?`;
-                    return res.json({
-                        speech: text,
-                        displayText: text,
-                        messages: {
-                            text: text
-                        },
-                        source: 'recarga'
+                    request({
+                        url: 'https://api.dialogflow.com/v1/contexts?sessionId=yaydevdiner',
+                        method: 'DELETE',
+                        headers: {
+                            "Authorization": "Bearer 8cd79128d3d946f085969c75ea181633",
+                            "Content-Type": "application/json"
+                        }
+                    }, (error, response) => {
+                        if (error) {
+                            console.log('Error sending message: ', error);
+                        } else if (response.body.error) {
+                            console.log('Error: ', response.body.error);
+                        } else {
+                            return res.json({
+                                speech: text,
+                                displayText: text,
+                                messages: {
+                                    text: text
+                                },
+                                source: 'recarga'
+                            });
+                        }
                     });
                 }
             }else{

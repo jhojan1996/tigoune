@@ -3,7 +3,7 @@ exports.info = (req, res)=>{
 	console.log("****** Info *******");
 	const json = req.body.result.contexts[0].parameters;
 	const pregunta = (typeof json.pregunta !== 'undefined') ? json.pregunta : "";
-	const verbo = (typeof json.verbo !== 'undefined') ? json.pregunta : "";
+	const verbo = (typeof json.verbo !== 'undefined') ? json.verbo : "";
 	const servicio = (typeof json.servicio !== 'undefined') ? json.servicio : '';
 	let text;
 
@@ -57,7 +57,7 @@ exports.info = (req, res)=>{
 		        });
 			}else{
 				request({
-		            url: '/questions',
+		            url: 'https://pqbzizwcgs.localtunnel.me/questions',
 		            method: 'POST',
 		            json: true,
 		            body: {
@@ -89,7 +89,7 @@ exports.info = (req, res)=>{
 		                });
 		            } else {
 		                console.log('response-------->', response.body);
-		                text = data.text;
+		                text = response.body.text;
 		                return res.json({
 		                    speech: text,
 		                    displayText: text,
